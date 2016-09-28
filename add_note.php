@@ -9,7 +9,7 @@ $db_name="scotchbox"; // Database name
 $tbl_name="notes"; // Table name
 
 // Connect to server and select database.
-mysqli_connect('localhost', 'root', 'root', 'scotchbox') or die(
+$db = mysqli_connect('localhost', 'root', 'root', 'scotchbox') or die(
   "connection failed"
 );
 
@@ -17,13 +17,13 @@ mysqli_connect('localhost', 'root', 'root', 'scotchbox') or die(
 
 // mysql_select_db("$db_name") or die("cannot select DB");
 
-$result = mysqli_query("INSERT INTO notes ( note ) VALUES ( '$note' )");
+$result = mysqli_query($db, "INSERT INTO notes ( note ) VALUES ( '$note' )");
 
 if ($result) {
-  mysqli_close();
+  mysqli_close($db);
   header("/");
 } else {
-  mysqli_close();
+  mysqli_close($db);
   echo "ERROR";
 }
 
