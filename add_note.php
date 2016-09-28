@@ -2,12 +2,10 @@
 
 $note = $_POST['note'];
 
-$db = mysqli_connect('localhost', 'root', 'root', 'scotchbox') or die(
-  'connection failed'
-);
+$db = mysqli_connect('localhost', 'root', 'root', 'scotchbox') or echo 'connection failed';
 
 $result = mysqli_query(
-  $db, "INSERT INTO notes ( note ) VALUES ( '$note' )"
+  $db, "INSERT INTO notes (note) VALUES ('$note')"
 );
 
 if ($result) {
