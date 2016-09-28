@@ -18,8 +18,8 @@
     <table>
       <?php while ($row = mysqli_fetch_array($result)) { ?>
       <tr>
-        <td><?php echo $row['created'] ?></td>
-        <td style="border: thin solid black;"><?php echo $row['note'] ?></td>
+        <td style="padding: 3em;"><?php echo $row['created'] ?>:</td>
+        <td style="border: thin solid black; padding: 3em;"><?php echo $row['note'] ?></td>
       </tr>
       <?php } ?>
     </table>
