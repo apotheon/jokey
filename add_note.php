@@ -1,5 +1,7 @@
 <?php
 
+$note = $_POST["note"];
+
 $host="localhost"; // Host name
 $username="root"; // Mysql username
 $password="root"; // Mysql password
