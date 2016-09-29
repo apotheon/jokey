@@ -18,7 +18,7 @@
     <table>
       <?php
         while ($row = mysqli_fetch_array($result)) {
-          echo "\n";
+          echo "\n      ";
           echo '<tr>';
           echo "\n        ";
           echo '<td style="padding: 1em;">' . $row['created'] . ':</td>';
