@@ -1,10 +1,10 @@
 <?php
 
-$note = mysqli_real_escape_string($_POST['note']);
-
 $db = mysqli_connect('localhost', 'root', 'root', 'scotchbox') or die(
   'connection failed'
 );
+
+$note = mysqli_real_escape_string($db, $_POST['note']);
 
 $result = mysqli_query(
   $db, "INSERT INTO notes (note) VALUES ('$note')"
@@ -13,8 +13,7 @@ $result = mysqli_query(
 echo $result;
 
 if ($result) {
-  echo $note;
-  // header('Location: ' . '/index.php');
+  header('Location: ' . '/index.php');
 } else {
   echo 'ERROR: ' . mysqli_error($db);
 }
