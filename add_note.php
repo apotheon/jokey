@@ -13,11 +13,11 @@ $result = mysqli_query(
 echo $result;
 
 if ($result) {
-  mysqli_close($db);
   header('Location: ' . '/index.php');
 } else {
-  mysqli_close($db);
   echo 'ERROR';
 }
+
+mysqli_close($db);
 
 ?>
