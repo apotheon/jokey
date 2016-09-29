@@ -15,7 +15,7 @@ echo $result;
 if ($result) {
   header('Location: ' . '/index.php');
 } else {
-  echo 'ERROR';
+  echo 'ERROR: ' . mysqli_error($db);
 }
 
 mysqli_close($db);
