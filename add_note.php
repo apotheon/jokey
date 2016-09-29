@@ -13,7 +13,8 @@ $result = mysqli_query(
 echo $result;
 
 if ($result) {
-  header('Location: ' . '/index.php');
+  echo $note;
+  // header('Location: ' . '/index.php');
 } else {
   echo 'ERROR: ' . mysqli_error($db);
 }
