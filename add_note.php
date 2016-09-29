@@ -1,6 +1,6 @@
 <?php
 
-$note = $_POST['note'];
+$note = mysqli_real_escape_string($_POST['note']);
 
 $db = mysqli_connect('localhost', 'root', 'root', 'scotchbox') or die(
   'connection failed'
