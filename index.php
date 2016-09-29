@@ -26,8 +26,10 @@
           echo '<td style="border: thin solid black; padding: 1em;">' . $row['note'] . '</td>';
           echo "\n      ";
           echo '</tr>';
-          echo "\n\n";
+          echo "\n";
         }
+
+        echo "\n";
       ?>
     </table>
   </body>
