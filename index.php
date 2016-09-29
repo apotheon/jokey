@@ -14,10 +14,11 @@
     </form>
 
     <?php $result = mysqli_query($db, "select * from notes"); ?>
+
     <table>
       <?php
         while ($row = mysqli_fetch_array($result)) {
-          echo "      ";
+          echo "\n      ";
           echo '<tr>';
           echo "\n        ";
           echo '<td style="padding: 1em;">' . $row['created'] . ':</td>';
@@ -27,6 +28,8 @@
           echo '</tr>';
           echo "\n";
         }
+
+        echo "\n";
       ?>
     </table>
   </body>
