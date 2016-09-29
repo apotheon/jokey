@@ -18,10 +18,12 @@
     <table>
       <?php
         while ($row = mysqli_fetch_array($result)) {
-          echo '<tr>';
-          echo '  <td style="padding: 1em;">' . $row['created'] . ':</td>';
-          echo '  <td style="border: thin solid black; padding: 1em;">' . $row['note'] . '</td>';
-          echo '</tr>';
+          echo <<EOL
+          <tr>
+            <td style="padding: 1em;"> $row['created'] </td>
+            <td style="border: thin solid black; padding: 1em;"> $row['note'] </td>
+          </tr>
+          EOL;
         }
       ?>
     </table>
