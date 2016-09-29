@@ -16,12 +16,14 @@
     <?php $result = mysqli_query($db, "select * from notes"); ?>
 
     <table>
-      <?php while ($row = mysqli_fetch_array($result)) { ?>
-      <tr>
-        <td style="padding: 1em;"><?php echo $row['created'] ?>:</td>
-        <td style="border: thin solid black; padding: 1em;"><?php echo $row['note'] ?></td>
-      </tr>
-      <?php } ?>
+      <?php
+        while ($row = mysqli_fetch_array($result)) {
+          echo '<tr>';
+          echo '  <td style="padding: 1em;">' . echo $row['created'] . ':</td>';
+          echo '  <td style="border: thin solid black; padding: 1em;">' . echo $row['note'] . '</td>';
+          echo '</tr>';
+        }
+      ?>
     </table>
   </body>
 </html>
