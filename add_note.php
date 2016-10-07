@@ -13,6 +13,7 @@ $result = mysqli_query(
 echo $result;
 
 if ($result) {
+  // http://php.net/manual/en/mysqli.error.php
   header('Location: ' . '/index.php');
 } else {
   echo 'ERROR: ' . mysqli_error($db);
